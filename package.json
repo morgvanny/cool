@@ -10,6 +10,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "now-build": "npm run build && mv build dist",
     "test": "react-scripts test --coverage",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
     "test:nowatch": "CI=true react-scripts test --env=jsdom",
