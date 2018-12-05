@@ -7,7 +7,7 @@ cache:
 script:
   - npm t
   - npm run build
-before_deploy: npm install now --public --no-save # Install Now CLI on Travis
+before_deploy: npm install now --no-save # Install Now CLI on Travis
 deploy:
   - provider: script # Run a custom deployment script which we will define below
     script:
