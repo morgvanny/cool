@@ -13,12 +13,11 @@
     "now-build": "npm run build && mv build dist",
     "test": "react-scripts test --coverage",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
-    "test:nowatch": "CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "format": "npm run prettier -- --write",
     "prettier": "prettier \"**/*.+(js|jsx|json|css|)\"",
-    "validate": "npm run lint && npm run prettier -- --list-different && npm run test:nowatch"
+    "validate": "npm run lint && npm run prettier -- --list-different && npm run test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,7 +37,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run test:nowatch"
+      "pre-commit": "lint-staged && npm run test"
     }
   },
   "jest": {
