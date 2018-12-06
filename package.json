@@ -38,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run prettier -- --list-different"
+      "pre-commit": "lint-staged && npm run prettier -- --list-different && npm run test"
     }
   },
   "jest": {
