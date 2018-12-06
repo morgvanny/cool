@@ -12,6 +12,7 @@
     "build": "react-scripts build",
     "now-build": "npm run build && mv build dist",
     "test": "react-scripts test --coverage",
+    "test:watch": "react-scripts test",
     "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch",
     "eject": "react-scripts eject",
     "lint": "eslint .",
@@ -37,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run prettier -- --list-different && npm run test"
+      "pre-commit": "lint-staged && npm run prettier -- --list-different"
     }
   },
   "jest": {
